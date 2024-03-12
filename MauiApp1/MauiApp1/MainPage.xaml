@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="0">
+            
+            <Label
+                x:Name="gorjeta"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="valor da gorjeta"
+            />
+
+            <Entry
+                x:Name="ValueEntry"
+                Placeholder="Digite o valor do pedido"
+            />
+
+            <Label
+                x:Name="tip"
+                Text="tip"
+            />
+
+            <Label
+                x:Name="LabelTipValue"
+                Text="0.00"
+            />
+
+            <Label
+                x:Name="TotalValue"
+                Text="total"
+            />
+
+            <Label
+                x:Name="LabelTotalValue"
+                Text="0.00"
+            />
+
+            <Label
+                x:Name="tipporcentage"
+                Text="Tip porcentage"
+            />
+
+            <Label
+                x:Name="quinze"
+                Text="15%"
+            />
+
+            <Slider
+                x:Name="SliderTipPercent"
+                WidthRequest="500" Maximum="100" Minimum="0" Value="0"/>
+
+            <Button
+                x:Name="QuinzeBtn"
+                Text="15%"
+                HorizontalOptions="Fill"
+                Clicked="OnQuinzeBtn_Clicked"
+            />
+
+            <Button
+                x:Name="OnVinteBtn"
+                Text="20%" 
+                HorizontalOptions="Fill"
+                Clicked="OnVinteBtn_Clicked"
+            />
+
+            <Button
+                x:Name="OnRounddownBtn"
+                Text="Arredondar para baixo" 
+                HorizontalOptions="Fill"
+                Clicked="OnRounddownBtn_Clicked"
+            />
+
+            <Button
+                x:Name="OnRoundupBtn"
+                Text="Arredondar para cima" 
+                HorizontalOptions="Fill"
+                Clicked="OnRoundupBtn_Clicked"
+            />
+                                         
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
