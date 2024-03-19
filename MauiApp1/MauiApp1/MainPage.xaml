@@ -6,7 +6,7 @@
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
-            Spacing="0">
+            Spacing="20">
             
             <Label
                 x:Name="gorjeta"
@@ -20,19 +20,25 @@
                 Placeholder="Digite o valor do pedido"
             />
 
+            <HorizontalStackLayout
+                Spacing="5">
+             
             <Label
                 x:Name="tip"
-                Text="tip"
+                Text="Tip:"
             />
 
             <Label
                 x:Name="LabelTipValue"
                 Text="0.00"
             />
+            </HorizontalStackLayout>
 
+            <HorizontalStackLayout
+               Spacing="5" >
             <Label
                 x:Name="TotalValue"
-                Text="total"
+                Text="Total:"
             />
 
             <Label
@@ -40,48 +46,77 @@
                 Text="0.00"
             />
 
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="5">
+            
             <Label
                 x:Name="tipporcentage"
                 Text="Tip porcentage"
             />
 
             <Label
-                x:Name="quinze"
-                Text="15%"
+                x:Name="PercentageValue"
+                Text="0.00%"
             />
+
+            </HorizontalStackLayout>
+
 
             <Slider
                 x:Name="SliderTipPercent"
-                WidthRequest="500" Maximum="100" Minimum="0" Value="0"/>
+                Maximum="100" Minimum="0" ValueChanged="SliderTipValue_ValueChanged"/>
 
-            <Button
-                x:Name="QuinzeBtn"
-                Text="15%"
-                HorizontalOptions="Fill"
-                Clicked="OnQuinzeBtn_Clicked"
-            />
 
-            <Button
-                x:Name="OnVinteBtn"
-                Text="20%" 
-                HorizontalOptions="Fill"
-                Clicked="OnVinteBtn_Clicked"
-            />
 
-            <Button
-                x:Name="OnRounddownBtn"
-                Text="Arredondar para baixo" 
-                HorizontalOptions="Fill"
-                Clicked="OnRounddownBtn_Clicked"
-            />
+            <HorizontalStackLayout
+                Spacing="10"
+            >
+                <Button
+                    x:Name="QuinzeBtn"
+                    Text="15%"
+                    WidthRequest="180"
+                    HorizontalOptions="Fill"
+                    Clicked="OnQuinzeBtn_Clicked"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    />
+           
 
-            <Button
-                x:Name="OnRoundupBtn"
-                Text="Arredondar para cima" 
-                HorizontalOptions="Fill"
-                Clicked="OnRoundupBtn_Clicked"
-            />
-                                         
+                <Button
+                    x:Name="OnVinteBtn"
+                    Text="20%"
+                    WidthRequest="180"
+                    HorizontalOptions="Fill"
+                    Clicked="OnVinteBtn_Clicked"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center">
+                <Button
+                    x:Name="OnRounddownBtn"
+                    Text="Arredondar para baixo" 
+                    HorizontalOptions="Fill"
+                    Clicked="OnRounddownBtn_Clicked"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    />
+
+                <Button
+                    x:Name="OnRoundupBtn"
+                    Text="Arredondar para cima" 
+                    HorizontalOptions="Fill"
+                    Clicked="OnRoundupBtn_Clicked"
+                    BorderColor="Black"
+                    BorderWidth="2"             
+                    />
+            </HorizontalStackLayout>
+        
         </VerticalStackLayout>
     </ScrollView>
 

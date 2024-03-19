@@ -17,12 +17,12 @@ namespace MauiApp1
 
         private void OnQuinzeBtn_Clicked(object sender, EventArgs e)
         {
-
+            SliderTipPercent.Value = 15;
         }
 
         private void OnVinteBtn_Clicked(object sender, EventArgs e)
         {
-
+            SliderTipPercent.Value = 20;
         }
 
         private void OnRounddownBtn_Clicked(object sender, EventArgs e)
@@ -60,6 +60,11 @@ namespace MauiApp1
             //calculo da gorjeta
             double result = amount * (percent / 100);
             return result;
+        }
+
+        private void SliderTipValue_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            PercentageValue.Text = Math.Round(SliderTipPercent.Value).ToString();
         }
     }
 }
